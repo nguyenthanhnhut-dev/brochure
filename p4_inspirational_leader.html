@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Inspirational Leader – Người truyền lửa xuất sắc | Forval</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #b84f0e;
+    --accent-light: #fdf0e6;
+    --accent-mid: #d05c10;
+    --dark: #2a1200;
+    --text: #2c3e50;
+    --text-light: #5a6a7a;
+    --border: #f0d0b4;
+    --bg: #fffbf7;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
+  .pdf-btn { position: fixed; top: 20px; right: 24px; z-index: 999; background: var(--accent); color: #fff; border: none; padding: 10px 22px; border-radius: 30px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 16px rgba(184,79,14,0.35); transition: all .2s; display: flex; align-items: center; gap: 8px; }
+  .pdf-btn:hover { background: var(--accent-mid); transform: translateY(-1px); }
+  .pdf-btn svg { width: 16px; height: 16px; fill: white; }
+  .hero { background: linear-gradient(135deg, #5c1e00 0%, #b84f0e 55%, #d05c10 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -80px; right: -60px; width: 380px; height: 380px; border-radius: 50%; background: rgba(255,255,255,0.04); }
+  .hero::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+  .brand-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 5px 14px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
+  .brand-tag span { width: 8px; height: 8px; background: #ffd4a3; border-radius: 50%; display: inline-block; }
+  .hero-en { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .hero-vn { font-size: 20px; font-weight: 300; opacity: 0.88; margin-bottom: 20px; letter-spacing: 0.5px; }
+  .hero-tagline { font-size: 14.5px; opacity: 0.8; font-style: italic; max-width: 580px; border-left: 3px solid rgba(255,255,255,0.4); padding-left: 14px; margin-top: 16px; }
+  .meta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+  .meta-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 10px 18px; display: flex; flex-direction: column; gap: 2px; }
+  .meta-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7; }
+  .meta-value { font-size: 14px; font-weight: 600; }
+  .page { padding: 56px 0; }
+  .page:nth-child(even) { background: var(--white); }
+  .section-badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 10px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 20px; line-height: 1.3; }
+  .section-title span { color: var(--accent); }
+  .problem-text { color: var(--text); line-height: 1.85; }
+  .problem-text p + p { margin-top: 14px; }
+  .target-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .target-list li { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.6; }
+  .target-list li::before { content: '→ '; font-weight: 700; color: var(--accent); }
+  .quote-block { background: var(--dark); color: white; border-radius: 14px; padding: 30px 36px; margin-bottom: 28px; position: relative; overflow: hidden; }
+  .quote-block::before { content: '"'; position: absolute; top: -10px; left: 18px; font-family: 'Playfair Display', serif; font-size: 100px; opacity: 0.12; line-height: 1; color: white; }
+  .quote-text { font-size: 16.5px; font-weight: 600; font-style: italic; line-height: 1.6; position: relative; z-index: 1; }
+  .method-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .method-card { border: 1.5px solid var(--border); border-radius: 10px; padding: 14px 16px; background: var(--white); }
+  .method-card-title { font-weight: 700; color: var(--accent); font-size: 13.5px; margin-bottom: 4px; }
+  .method-card-desc { font-size: 13px; color: var(--text-light); line-height: 1.55; }
+  .modules { display: flex; flex-direction: column; gap: 16px; }
+  .module { border-radius: 12px; border: 1.5px solid var(--border); overflow: hidden; background: var(--white); }
+  .module-header { background: var(--accent); color: white; padding: 12px 20px; display: flex; align-items: center; gap: 14px; }
+  .module-num { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
+  .module-title { font-weight: 700; font-size: 14.5px; }
+  .module-body { padding: 16px 20px; font-size: 14px; line-height: 1.75; color: var(--text); }
+  .outcome-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .outcome-item { display: flex; gap: 12px; align-items: flex-start; background: var(--accent-light); border-radius: 10px; padding: 14px 16px; }
+  .outcome-icon { flex-shrink: 0; width: 24px; height: 24px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .outcome-icon svg { width: 13px; height: 13px; fill: white; }
+  .outcome-text { font-size: 14px; line-height: 1.6; color: var(--dark); font-weight: 500; }
+  .trainer-section { display: flex; gap: 40px; align-items: flex-start; }
+  .trainer-photo-wrap { flex-shrink: 0; width: 190px; }
+  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(184,79,14,0.2); border: 4px solid var(--accent-light); }
+  .trainer-info { flex: 1; }
+  .trainer-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+  .trainer-role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
+  .trainer-creds { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+  .cred-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text); }
+  .cred-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+  .trainer-bio { font-size: 14.5px; line-height: 1.8; color: var(--text); font-style: italic; border-top: 1.5px solid var(--border); padding-top: 16px; }
+  .invest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .invest-card { border-radius: 12px; padding: 20px 24px; border: 1.5px solid var(--border); background: var(--white); }
+  .invest-label { font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+  .invest-value { font-size: 18px; font-weight: 700; color: var(--dark); }
+  .invest-card.highlight { background: var(--accent); border-color: var(--accent); }
+  .invest-card.highlight .invest-label { color: rgba(255,255,255,0.75); }
+  .invest-card.highlight .invest-value { color: white; font-size: 22px; }
+  .invest-note { margin-top: 20px; background: var(--accent-light); border-radius: 10px; padding: 16px 20px; font-size: 14px; color: var(--text); line-height: 1.7; }
+  .footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 32px; font-size: 12.5px; }
+  .footer strong { color: white; }
+  @media print {
+    .pdf-btn { display: none !important; }
+    .hero, .module-header, .quote-block, .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { font-size: 13px; }
+    .page { padding: 36px 0; }
+  }
+</style>
+</head>
+<body>
+
+<button class="pdf-btn" onclick="window.print()">
+  <svg viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
+  Xuất PDF
+</button>
+
+<div class="hero">
+  <div class="container">
+    <div class="brand-tag"><span></span> Forval Public Training Program</div>
+    <div class="hero-en">The Inspirational Leader</div>
+    <div class="hero-vn">Người truyền lửa xuất sắc</div>
+    <div class="hero-tagline">Khơi dậy động lực, tạo cam kết và xây dựng đội ngũ cùng tiến về một mục tiêu</div>
+    <div class="meta-row">
+      <div class="meta-card"><div class="meta-label">Ngày diễn ra</div><div class="meta-value">02/07/2026</div></div>
+      <div class="meta-card"><div class="meta-label">Thời gian</div><div class="meta-value">8:30 – 16:30</div></div>
+      <div class="meta-card"><div class="meta-label">Hình thức</div><div class="meta-value">Offline · 1 ngày</div></div>
+      <div class="meta-card"><div class="meta-label">Địa điểm</div><div class="meta-value">Amata Biên Hòa</div></div>
+      <div class="meta-card"><div class="meta-label">Chi phí</div><div class="meta-value">3.500.000 VNĐ/người</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">01 · Bức tranh vấn đề</div>
+    <div class="section-title">Khi đội ngũ làm việc nhưng <span>thiếu lửa</span></div>
+    <div class="problem-text">
+      <p>Trong bối cảnh môi trường kinh doanh ngày càng biến động, bất định và nhiều áp lực, vai trò của người quản lý không còn dừng ở việc giao việc và theo dõi kết quả. Đội ngũ ngày nay cần nhiều hơn một người kiểm soát công việc; họ cần một người có thể tạo năng lượng tích cực, giữ sự kết nối, khơi dậy động lực và giúp mọi người không đánh mất tinh thần giữa áp lực vận hành hằng ngày.</p>
+      <p>Trong thực tế, nhiều quản lý vẫn đang gặp khó khăn khi muốn tạo động lực cho đội ngũ. Có người quá tập trung vào mục tiêu và kết quả nên vô tình bỏ quên cảm xúc, nhu cầu và sự phát triển của nhân viên. Có người nhận thấy tinh thần đội nhóm đang giảm dần, nhưng chưa biết cách khích lệ, ghi nhận hay dẫn dắt để nhân viên thật sự muốn nỗ lực.</p>
+      <p>Khi người quản lý chưa biết cách truyền lửa, đội ngũ dễ rơi vào trạng thái làm việc cầm chừng, thiếu chủ động và thiếu kết nối. Mọi người có thể vẫn hoàn thành công việc ở mức tối thiểu, nhưng khó tạo ra sự bứt phá, khó chủ động đóng góp và càng khó gắn bó với mục tiêu chung của tổ chức.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">02 · Đối tượng phù hợp</div>
+    <div class="section-title">Chương trình dành cho <span>ai</span>?</div>
+    <ul class="target-list">
+      <li>Quản lý cấp trung trong nhà máy, khu công nghiệp và doanh nghiệp sản xuất</li>
+      <li>Trưởng/phó phòng, supervisor, line leader, quản lý hiện trường</li>
+      <li>Quản lý đang phụ trách đội ngũ có dấu hiệu giảm động lực, giảm gắn kết hoặc thiếu tinh thần chủ động</li>
+      <li>Quản lý muốn nâng cao năng lực coaching, động viên, tạo cam kết và giữ lửa đội ngũ</li>
+      <li>Doanh nghiệp muốn xây dựng văn hóa làm việc tích cực, rõ mục tiêu và tăng tính đồng hành trong đội nhóm</li>
+    </ul>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">03 · Triết lý & Phương pháp</div>
+    <div class="section-title">Nền tảng <span>tư duy</span> của chương trình</div>
+    <div class="quote-block">
+      <div class="quote-text">Người quản lý giỏi không chỉ tạo ra kết quả, mà còn tạo ra năng lượng để đội ngũ muốn cùng mình tạo ra kết quả đó.</div>
+    </div>
+    <div class="method-grid">
+      <div class="method-card"><div class="method-card-title">🪞 Self-reflection</div><div class="method-card-desc">Tự soi lại phong cách dẫn dắt, nguồn năng lượng và niềm tin lãnh đạo của bản thân</div></div>
+      <div class="method-card"><div class="method-card-title">🗺️ Team Canvas</div><div class="method-card-desc">Ứng dụng Team Canvas để làm rõ mục tiêu, vai trò, giá trị và nguyên tắc phối hợp nhóm</div></div>
+      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Khơi mở nhận thức và khả năng dẫn dắt động lực của đội ngũ bằng câu hỏi chất lượng</div></div>
+      <div class="method-card"><div class="method-card-title">📊 Case Discussion</div><div class="method-card-desc">Phân tích tình huống thực tế về động lực, gắn kết và quản lý đội nhóm trong môi trường sản xuất</div></div>
+      <div class="method-card"><div class="method-card-title">👥 Team Workshop</div><div class="method-card-desc">Hoạt động nhóm gắn với bối cảnh thực tế, giúp chuyển hóa nhận thức thành hành vi cụ thể</div></div>
+      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây kế hoạch ứng dụng sau khóa học để duy trì sức truyền lửa trong thực tế công việc</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">04 · Nội dung chương trình</div>
+    <div class="section-title">5 <span>Module</span> cốt lõi</div>
+    <div class="modules">
+      <div class="module">
+        <div class="module-header"><div class="module-num">1</div><div class="module-title">Bối cảnh mới và vai trò mới của người quản lý truyền cảm hứng</div></div>
+        <div class="module-body">Học viên nhìn lại những thay đổi của môi trường kinh doanh trong bối cảnh biến động và áp lực ngày càng lớn; từ đó hiểu vì sao đội ngũ ngày nay cần một người có khả năng giữ nhịp tinh thần, tạo năng lượng tích cực và dẫn dắt bằng ảnh hưởng thay vì chỉ bằng chức danh.</div>
+      </div>
+      <div class="module">
+        <div class="module-header"><div class="module-num">2</div><div class="module-title">Đánh thức nội lực và hiểu cơ chế hình thành động lực</div></div>
+        <div class="module-body">Chương trình giúp học viên hiểu động lực không chỉ là cảm hứng nhất thời, mà là kết quả của cách con người diễn giải ngoại cảnh, suy nghĩ, cảm xúc và hành vi. Học viên khám phá mối liên hệ giữa nội lực cá nhân, kỳ vọng, phản ứng và kết quả – một người quản lý muốn truyền lửa hiệu quả trước hết phải quản trị được chính mình.</div>
+      </div>
+      <div class="module">
+        <div class="module-header"><div class="module-num">3</div><div class="module-title">Thiết lập mục tiêu rõ ràng để tạo cam kết và định hướng hành động</div></div>
+        <div class="module-body">Học viên được hướng dẫn cách ứng dụng tư duy SMART/KPI để đội ngũ hiểu mình đang hướng tới điều gì, vì sao điều đó quan trọng và mỗi người đóng góp như thế nào vào mục tiêu chung. Khi mục tiêu đủ rõ, việc tạo động lực sẽ bớt cảm tính và trở nên thực tiễn hơn.</div>
+      </div>
+      <div class="module">
+        <div class="module-header"><div class="module-num">4</div><div class="module-title">Coaching, ghi nhận và khích lệ để duy trì động lực bền vững</div></div>
+        <div class="module-body">Module này đi sâu vào các hành vi quản lý có tác động trực tiếp đến tinh thần đội ngũ: đặt câu hỏi coaching, lắng nghe, khích lệ đúng lúc, ghi nhận đúng cách. Học viên thực hành thúc đẩy nhân viên đang chững lại, hỗ trợ người thiếu tự tin và tạo sự đồng hành thay vì chỉ thúc ép hoàn thành công việc.</div>
+      </div>
+      <div class="module">
+        <div class="module-header"><div class="module-num">5</div><div class="module-title">Xây nền gắn kết đội ngũ bằng Team Canvas và kế hoạch ứng dụng</div></div>
+        <div class="module-body">Học viên ứng dụng tư duy Team Canvas để nhìn lại mục tiêu tồn tại của đội, giá trị chung, vai trò từng thành viên và nguyên tắc phối hợp. Đây là bước giúp "truyền lửa" không dừng ở mức khích lệ cá nhân, mà được chuyển thành nền tảng văn hóa và cơ chế phối hợp thực sự của đội ngũ.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">05 · Kết quả kỳ vọng</div>
+    <div class="section-title">Sau chương trình, học viên <span>có thể</span></div>
+    <div class="outcome-grid">
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Hiểu rõ vai trò của người quản lý trong việc tạo động lực và giữ lửa đội ngũ</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Biết cách thiết lập mục tiêu rõ ràng để tạo định hướng và cam kết hành động</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Nâng cao khả năng coaching, động viên và ghi nhận thành tích đúng cách</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tạo môi trường làm việc tích cực hơn, giảm trạng thái làm việc cầm chừng</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Làm rõ hơn mục tiêu chung, vai trò và nguyên tắc phối hợp của đội ngũ</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Xây dựng nền tảng văn hóa làm việc tích cực và động lực bền vững</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">06 · Thông tin giảng viên</div>
+    <div class="section-title">Người <span>đồng hành</span> cùng bạn</div>
+    <div class="trainer-section">
+      <div class="trainer-photo-wrap">
+        <img src="data:image/jpeg;base64,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" alt="Ngô Bảo Thái – Forval Trainer">
+      </div>
+      <div class="trainer-info">
+        <div class="trainer-name">Ngô Bảo Thái</div>
+        <div class="trainer-role">Forval Trainer</div>
+        <div class="trainer-creds">
+          <div class="cred-item"><div class="cred-dot"></div>10 năm kinh nghiệm đào tạo – huấn luyện doanh nghiệp</div>
+          <div class="cred-item"><div class="cred-dot"></div>Chuyên gia phát triển năng lực lãnh đạo và hiệu suất cá nhân</div>
+          <div class="cred-item"><div class="cred-dot"></div>MBA – Tư vấn quản trị chiến lược doanh nghiệp</div>
+          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer & Coach</div>
+        </div>
+        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất và khu công nghiệp.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="section-badge">07 · Hình thức tham gia & Đầu tư</div>
+    <div class="section-title">Thông tin <span>đăng ký</span></div>
+    <div class="invest-grid">
+      <div class="invest-card"><div class="invest-label">Ngày diễn ra</div><div class="invest-value">02/07/2026</div></div>
+      <div class="invest-card"><div class="invest-label">Thời gian</div><div class="invest-value">8:30 – 16:30</div></div>
+      <div class="invest-card"><div class="invest-label">Hình thức</div><div class="invest-value">Offline · 1 ngày</div></div>
+      <div class="invest-card"><div class="invest-label">Địa điểm</div><div class="invest-value">Amata Biên Hòa</div></div>
+      <div class="invest-card highlight"><div class="invest-label">Chi phí đầu tư</div><div class="invest-value">3.500.000 VNĐ/người</div></div>
+    </div>
+    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành cho đội ngũ quản lý đang mong muốn xây dựng động lực bền vững, tăng gắn kết và dẫn dắt đội ngũ bằng năng lượng tích cực, rõ mục tiêu và giàu cam kết.</div>
+  </div>
+</div>
+
+<div class="footer">
+  <strong>Forval Việt Nam</strong> · Public Training Program 2026 · The Inspirational Leader
+</div>
+</body>
+</html>
