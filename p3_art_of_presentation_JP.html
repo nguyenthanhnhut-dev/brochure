@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プログラム3 | THE ART OF INFLUENCING PRESENTATION ～人を動かすプレゼンテーションの技術～</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2b4a; --navy-light: #243656; --gold: #b8914a; --gold-light: #d4aa6a;
+    --white: #ffffff; --gray-100: #f5f4f1; --gray-200: #e8e6e1; --gray-400: #9a9690;
+    --gray-600: #5c5852; --gray-800: #2e2c28;
+    --program-color: #7b3a2a; --program-light: #f7ede9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; background: #e8e6e0; color: var(--gray-800); font-size: 14px; line-height: 1.8; }
+  .page { width: 794px; min-height: 1123px; background: var(--white); margin: 40px auto; box-shadow: 0 4px 40px rgba(0,0,0,0.15); position: relative; overflow: hidden; }
+  .page-header { background: var(--navy); padding: 48px 56px 40px; position: relative; overflow: hidden; }
+  .page-header::before { content: ''; position: absolute; top: -60px; right: -60px; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,0.04); }
+  .page-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 60%, transparent 100%); }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; }
+  .program-badge { background: rgba(184,145,74,0.2); border: 1px solid rgba(184,145,74,0.4); color: var(--gold-light); font-size: 11px; font-weight: 600; letter-spacing: 0.15em; padding: 5px 14px; border-radius: 2px; text-transform: uppercase; }
+  .forval-brand { color: rgba(255,255,255,0.45); font-size: 11px; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; text-align: right; line-height: 1.6; }
+  .forval-brand strong { display: block; color: rgba(255,255,255,0.75); font-weight: 600; font-size: 12px; }
+  .header-title-en { font-family: 'Noto Serif JP', serif; font-size: 24px; font-weight: 700; color: var(--white); letter-spacing: 0.03em; line-height: 1.2; margin-bottom: 8px; }
+  .header-title-jp { font-size: 15px; font-weight: 500; color: var(--gold-light); letter-spacing: 0.1em; margin-bottom: 18px; }
+  .header-tagline { font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 300; line-height: 1.7; max-width: 600px; border-left: 2px solid rgba(184,145,74,0.5); padding-left: 16px; }
+  .header-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,0.08); margin-top: 28px; border-radius: 4px; overflow: hidden; }
+  .meta-item { background: rgba(255,255,255,0.05); padding: 14px 16px; text-align: center; }
+  .meta-label { font-size: 9px; font-weight: 600; letter-spacing: 0.15em; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 5px; }
+  .meta-value { font-size: 13px; font-weight: 600; color: var(--white); line-height: 1.3; }
+  .meta-value small { display: block; font-size: 10px; font-weight: 400; color: rgba(255,255,255,0.55); margin-top: 2px; }
+  .page-body { padding: 0 56px 56px; }
+  .section { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--gray-200); }
+  .section:first-child { border-top: none; margin-top: 32px; }
+  .section-label { font-size: 9px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.4; }
+  .section-title span { color: var(--program-color); }
+  .section-text { font-size: 13px; color: var(--gray-600); line-height: 1.9; }
+  .section-text p { margin-bottom: 12px; }
+  .section-text p:last-child { margin-bottom: 0; }
+  .philosophy-box { background: var(--program-light); border-left: 4px solid var(--program-color); padding: 20px 24px; border-radius: 0 6px 6px 0; margin-bottom: 20px; }
+  .philosophy-label { font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--program-color); margin-bottom: 8px; }
+  .philosophy-text { font-family: 'Noto Serif JP', serif; font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.7; }
+  .methods-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+  .method-item { display: flex; align-items: flex-start; gap: 10px; background: var(--gray-100); padding: 12px 14px; border-radius: 4px; }
+  .method-icon { width: 28px; height: 28px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .method-icon svg { width: 14px; height: 14px; fill: white; }
+  .method-name { font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .method-desc { font-size: 11px; color: var(--gray-600); line-height: 1.5; }
+  .target-list { list-style: none; display: grid; grid-template-columns: 1fr; gap: 6px; margin-top: 4px; }
+  .target-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+  .target-list li::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; margin-top: 8px; }
+  .modules-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+  .module { border: 1px solid var(--gray-200); border-radius: 6px; overflow: hidden; }
+  .module-header { display: flex; align-items: center; gap: 16px; padding: 14px 18px; background: var(--gray-100); }
+  .module-num { width: 28px; height: 28px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; font-family: 'Noto Serif JP', serif; }
+  .module-title { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+  .module-body { padding: 14px 18px 14px 62px; font-size: 12.5px; color: var(--gray-600); line-height: 1.8; background: white; }
+  .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px; }
+  .outcome-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; background: var(--gray-100); border-radius: 4px; border-left: 3px solid var(--program-color); }
+  .outcome-icon { width: 20px; height: 20px; background: var(--program-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .outcome-icon svg { width: 11px; height: 11px; fill: white; }
+  .outcome-text { font-size: 12px; color: var(--gray-600); line-height: 1.6; }
+  .trainer-card { display: flex; gap: 28px; align-items: flex-start; background: var(--gray-100); border-radius: 8px; padding: 24px; margin-top: 4px; }
+  .trainer-photo { width: 90px; height: 110px; background: var(--navy); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .trainer-photo-placeholder { text-align: center; color: rgba(255,255,255,0.4); }
+  .trainer-photo-placeholder svg { width: 40px; height: 40px; fill: rgba(255,255,255,0.4); }
+  .trainer-info { flex: 1; }
+  .trainer-name { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .trainer-role { font-size: 11px; color: var(--gold); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+  .trainer-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 14px; }
+  .stat-item { background: white; border-radius: 4px; padding: 8px 12px; }
+  .stat-label { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; color: var(--gray-400); text-transform: uppercase; margin-bottom: 2px; }
+  .stat-value { font-size: 11.5px; color: var(--gray-800); font-weight: 500; line-height: 1.4; }
+  .trainer-bio { font-size: 12px; color: var(--gray-600); line-height: 1.8; }
+  .closing-box { background: var(--navy); color: white; border-radius: 6px; padding: 20px 24px; margin-top: 4px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  .closing-details { display: flex; gap: 24px; flex-wrap: wrap; }
+  .closing-item { display: flex; flex-direction: column; gap: 3px; }
+  .closing-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.45); font-weight: 600; }
+  .closing-value { font-size: 13px; font-weight: 600; color: white; }
+  .closing-contact { text-align: right; flex-shrink: 0; }
+  .closing-contact-label { font-size: 9px; letter-spacing: 0.15em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 4px; }
+  .closing-contact-line { font-size: 11px; color: rgba(255,255,255,0.75); line-height: 1.6; }
+  .closing-contact-line a { color: var(--gold-light); text-decoration: none; }
+  .page-footer { position: absolute; bottom: 24px; left: 56px; right: 56px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--gray-200); padding-top: 12px; }
+  .footer-brand { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray-400); }
+  .footer-prog { font-size: 9px; color: var(--gray-400); letter-spacing: 0.05em; }
+  @media print { body { background: white; } .page { width: 100%; margin: 0; box-shadow: none; min-height: auto; } }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="page-header">
+    <div class="header-top">
+      <div class="program-badge">Program 03 · 2026年6月25日</div>
+      <div class="forval-brand"><strong>FORVAL VIETNAM</strong>ELITE MANAGER 2026</div>
+    </div>
+    <div class="header-title-en">THE ART OF INFLUENCING PRESENTATION</div>
+    <div class="header-title-jp">～人を動かすプレゼンテーションの技術～</div>
+    <div class="header-tagline">あらゆるマネジメント場面において、説得力のある伝達とポジティブな影響力を生み出す</div>
+    <div class="header-meta">
+      <div class="meta-item"><div class="meta-label">開催日</div><div class="meta-value">2026年6月25日<small>8:30 – 16:30</small></div></div>
+      <div class="meta-item"><div class="meta-label">形式</div><div class="meta-value">オフライン<small>1日間</small></div></div>
+      <div class="meta-item"><div class="meta-label">会場</div><div class="meta-value">アマタ<small>ビエンホア</small></div></div>
+      <div class="meta-item"><div class="meta-label">参加費用</div><div class="meta-value">3,500,000<small>VND / 名</small></div></div>
+    </div>
+  </div>
+
+  <div class="page-body">
+
+    <div class="section">
+      <div class="section-label">01 · 課題の背景</div>
+      <div class="section-title">現場が抱える<span>課題</span></div>
+      <div class="section-text">
+        <p>製造業やオペレーション現場において、管理者には専門知識だけでなく、目標、方針、計画、期待事項をチームへ明確に伝える力が求められます。しかし、内容を十分に理解していても、大勢の前で話すことや会議をリードすること、上司・同僚・部下を説得して行動につなげることに苦手意識を持つ管理者は少なくありません。</p>
+        <p>多くの会議では、メッセージが十分に明確でなかったり、内容が散漫で要点に欠けたりすることで、十分な合意形成につながっていないケースがあります。また、優れたアイデアを持っていても、伝え方に論理性や説得力が不足しているために、提案が期待した影響力を持てない場合もあります。</p>
+        <p>人前で話す際のプレッシャー、評価されることへの不安、ボディランゲージへの自信不足、難しい質問への対応時の戸惑いなども、多くの管理者に共通する課題です。これらはマネジメントコミュニケーションの質を低下させ、組織内でポジティブな影響力を発揮する機会を大きく減少させます。</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">02 · 対象者</div>
+      <div class="section-title">こんな方に<span>最適</span>です</div>
+      <ul class="target-list">
+        <li>工場、工業団地、製造業企業における中間管理職</li>
+        <li>チーム会議、報告、プレゼンテーションを頻繁に行う部門長／副部門長、スーパーバイザー、ラインリーダー</li>
+        <li>専門知識は高いが、大勢の前で話すことにまだ自信がない新任管理者</li>
+        <li>方針、目標、期待事項をより明確に伝える力を向上させたい管理者</li>
+        <li>会議品質、社内コミュニケーションの説得力向上を目指す企業</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <div class="section-label">03 · 理念およびアプローチ手法</div>
+      <div class="section-title">プログラムの<span>哲学</span></div>
+      <div class="philosophy-box">
+        <div class="philosophy-label">Program Philosophy</div>
+        <div class="philosophy-text">優れたプレゼンテーションとは、単に相手に内容を理解させるだけでなく、<br>「自分が信じることを、相手にも行動として起こしたくさせること」です。</div>
+      </div>
+      <div class="methods-grid">
+        <div class="method-item">
+          <div class="method-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+          <div><div class="method-name">Participatory Learning</div><div class="method-desc">実践参加と直接フィードバックを通じた学習</div></div>
+        </div>
+        <div class="method-item">
+          <div class="method-icon"><svg viewBox="0 0 24 24"><path d="M21 6.5h-3.5V5c0-1.1-.9-2-2-2h-7c-1.1 0-2 .9-2 2v1.5H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2z"/></svg></div>
+          <div><div class="method-name">Mini-lecture</div><div class="method-desc">簡潔で即実践可能な思考フレームワークの提供</div></div>
+        </div>
+        <div class="method-item">
+          <div class="method-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+          <div><div class="method-name">Case Discussion</div><div class="method-desc">会議、報告、提案、説得場面の分析</div></div>
+        </div>
+        <div class="method-item">
+          <div class="method-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+          <div><div class="method-name">Presentation Practice</div><div class="method-desc">テーマ別プレゼンテーション演習</div></div>
+        </div>
+        <div class="method-item">
+          <div class="method-icon"><svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/></svg></div>
+          <div><div class="method-name">Role-play</div><div class="method-desc">管理コミュニケーション、上司への報告、異論対応のシミュレーション</div></div>
+        </div>
+        <div class="method-item">
+          <div class="method-icon"><svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg></div>
+          <div><div class="method-name">Coaching Feedback</div><div class="method-desc">内容・声・ボディランゲージ改善のための指導型フィードバック</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">04 · プログラム内容</div>
+      <div class="section-title">5つの<span>モジュール</span></div>
+      <div class="modules-list">
+        <div class="module">
+          <div class="module-header"><div class="module-num">1</div><div class="module-title">管理者としてのプレゼンテーションに対する正しい考え方</div></div>
+          <div class="module-body">受講者は、プレゼンテーション能力が単なるコミュニケーションスキルではなく、マネジメントにおける影響力を生み出す重要なツールであることを理解します。また、最初に抱きやすい心理的障壁を取り除き、「プレゼンテーション力は才能ではなく、訓練によって身につけられる能力である」という認識を築きます。</div>
+        </div>
+        <div class="module">
+          <div class="module-header"><div class="module-num">2</div><div class="module-title">印象的なプレゼンテーション構成の習得</div></div>
+          <div class="module-body">受講者は、「サンドイッチ構成モデル」を用いた、論理的で分かりやすいプレゼンテーション構成法を学びます。5つのステップ（つながり作り → 導入 → 本題 → 要約 → 結論）を通じて、聞き手が理解しやすい流れを構築します。</div>
+        </div>
+        <div class="module">
+          <div class="module-header"><div class="module-num">3</div><div class="module-title">明確で記憶に残り、説得力のあるプレゼン内容設計</div></div>
+          <div class="module-body">受講者は、声の使い方や話すリズムを実践しながら、アイデアを具体的なメッセージへ変換する方法を学びます。また、構成整理、論点の配置、内容の流れづくりを通じて、聞き手にとって理解しやすいプレゼンテーションを設計する力を養います。</div>
+        </div>
+        <div class="module">
+          <div class="module-header"><div class="module-num">4</div><div class="module-title">ボディランゲージと声を活用した魅力的なプレゼンテーション技術</div></div>
+          <div class="module-body">受講者は、ボディランゲージを用いて内容を補足・強調し、プレゼンテーションに安定感と躍動感を加える方法を実践的に学びます。また、スピード、アクセント、イントネーションなどを通じて声の使い方をトレーニングし、「引き込まれるように話す」力を身につけます。</div>
+        </div>
+        <div class="module">
+          <div class="module-header"><div class="module-num">5</div><div class="module-title">プレゼンテーション実践と研修後の改善計画策定</div></div>
+          <div class="module-body">受講者は実際のケースを用いてプレゼンテーション演習を行い、講師および他の受講者から直接フィードバックを受けます。その後、研修終了後すぐに実務へ応用できるよう、自身の改善計画を策定します。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">05 · 期待される効果</div>
+      <div class="section-title">プログラム終了後に<span>できること</span></div>
+      <div class="outcomes-grid">
+        <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">プレゼンテーションが影響力創出とチームリードに果たす役割を理解する</div></div>
+        <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">論理的で明確かつ要点を押さえたプレゼン内容を構築できる</div></div>
+        <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">大勢の前での発言、チーム会議、上司への報告に対する自信を高める</div></div>
+        <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">ボディランゲージ、声の使い方、聞き手とのつながり方をより効果的に活用できる</div></div>
+        <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">難しい状況、予想外の質問、反対意見への対応力を向上させる</div></div>
+        <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">会議品質、社内コミュニケーション品質、チーム内合意形成力を向上させる</div></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">06 · 講師情報</div>
+      <div class="section-title">担当<span>講師</span></div>
+      <div class="trainer-card">
+        <div class="trainer-photo"><img src="data:image/jpeg;base64,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" alt="Ngô Bảo Thái – Forval Trainer" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+        <div class="trainer-info">
+          <div class="trainer-name">Ngô Bảo Thái</div>
+          <div class="trainer-role">Forval Trainer · Business & Leadership Coach</div>
+          <div class="trainer-stats">
+            <div class="stat-item"><div class="stat-label">経験</div><div class="stat-value">10年の企業向け研修・コーチング経験</div></div>
+            <div class="stat-item"><div class="stat-label">資格</div><div class="stat-value">J.C. Maxwell Trainer & Coach</div></div>
+            <div class="stat-item"><div class="stat-label">学歴</div><div class="stat-value">MBA（戦略経営コンサルティング）</div></div>
+            <div class="stat-item"><div class="stat-label">専門分野</div><div class="stat-value">リーダーシップ開発・個人パフォーマンス向上</div></div>
+          </div>
+          <div class="trainer-bio">ゴ・バオ・タイは、リーダーシップ能力の開発、マネジメントにおけるコミュニケーション、業務効率の向上において、長年管理職層に伴走してきた経験を持つ企業向け研修講師です。MBAのバックグラウンドと実践的なコーチング思考により、特に製造業や工業団地内の管理環境に適した、実践的で分かりやすく、応用性の高いプログラムを提供します。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">07 · 参加形式および参加費用</div>
+      <div class="closing-box">
+        <div class="closing-details">
+          <div class="closing-item"><div class="closing-label">日時</div><div class="closing-value">2026年6月25日 | 8:30–16:30</div></div>
+          <div class="closing-item"><div class="closing-label">形式</div><div class="closing-value">オフライン・1日間</div></div>
+          <div class="closing-item"><div class="closing-label">場所</div><div class="closing-value">アマタ（Amata）ビエンホア</div></div>
+          <div class="closing-item"><div class="closing-label">参加費用</div><div class="closing-value">3,500,000 VND / 名</div></div>
+        </div>
+        <div class="closing-contact">
+          <div class="closing-contact-label">お問い合わせ</div>
+          <div class="closing-contact-line"><a href="mailto:thanh-ln@vn.forval.com">thanh-ln@vn.forval.com</a></div>
+          <div class="closing-contact-line">028 39939903</div>
+          <div class="closing-contact-line">L10-05, Vincom Center, 72 Lê Thánh Tôn, HCMC</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <div class="footer-brand">Forval Vietnam · Elite Manager 2026</div>
+    <div class="footer-prog">Program 03 / 05 · The Art of Influencing Presentation</div>
+  </div>
+</div>
+</body>
+</html>
