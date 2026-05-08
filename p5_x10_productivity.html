@@ -7,28 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --accent: #4a2080;
-    --accent-light: #f0eaf8;
-    --accent-mid: #5c2a9e;
-    --dark: #160930;
+    --accent: #1a6b3c;
+    --accent-light: #e8f5ee;
+    --accent-mid: #238a4f;
+    --dark: #1a2330;
     --text: #2c3e50;
     --text-light: #5a6a7a;
-    --border: #d4c4ec;
-    --bg: #f9f7fc;
+    --border: #e7d5ee;
+    --bg: #f9fafb;
     --white: #ffffff;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
-  .pdf-btn { position: fixed; top: 20px; right: 24px; z-index: 999; background: var(--accent); color: #fff; border: none; padding: 10px 22px; border-radius: 30px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 16px rgba(74,32,128,0.35); transition: all .2s; display: flex; align-items: center; gap: 8px; }
-  .pdf-btn:hover { background: var(--accent-mid); transform: translateY(-1px); }
-  .pdf-btn svg { width: 16px; height: 16px; fill: white; }
-  .hero { background: linear-gradient(135deg, #1a0540 0%, #4a2080 55%, #5c2a9e 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -80px; right: -60px; width: 380px; height: 380px; border-radius: 50%; background: rgba(255,255,255,0.04); }
-  .hero::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero { background: linear-gradient(135deg, #0d3d22 0%, #1a6b3c 50%, #238a4f 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 350px; height: 350px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,0.04); }
   .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
   .brand-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 5px 14px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
-  .brand-tag span { width: 8px; height: 8px; background: #d4b3ff; border-radius: 50%; display: inline-block; }
-  .hero-en { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .brand-tag span { width: 8px; height: 8px; background: #7fffd4; border-radius: 50%; display: inline-block; }
+  .hero-en { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
   .hero-vn { font-size: 20px; font-weight: 300; opacity: 0.88; margin-bottom: 20px; letter-spacing: 0.5px; }
   .hero-tagline { font-size: 14.5px; opacity: 0.8; font-style: italic; max-width: 580px; border-left: 3px solid rgba(255,255,255,0.4); padding-left: 14px; margin-top: 16px; }
   .meta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
@@ -65,7 +62,7 @@
   .outcome-text { font-size: 14px; line-height: 1.6; color: var(--dark); font-weight: 500; }
   .trainer-section { display: flex; gap: 40px; align-items: flex-start; }
   .trainer-photo-wrap { flex-shrink: 0; width: 190px; }
-  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(74,32,128,0.2); border: 4px solid var(--accent-light); }
+  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(14,107,94,0.2); border: 4px solid var(--accent-light); }
   .trainer-info { flex: 1; }
   .trainer-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
   .trainer-role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
@@ -84,8 +81,10 @@
   .footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 32px; font-size: 12.5px; }
   .footer strong { color: white; }
   @media print {
-    .pdf-btn { display: none !important; }
-    .hero, .module-header, .quote-block, .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .module-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .quote-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     body { font-size: 13px; }
     .page { padding: 36px 0; }
   }
@@ -112,11 +111,11 @@
 <div class="page">
   <div class="container">
     <div class="section-badge">01 · Bức tranh vấn đề</div>
-    <div class="section-title">Làm nhiều nhưng <span>chưa tạo ra giá trị tương xứng</span></div>
+    <div class="section-title">Vì sao cần <span>Unlock Your X10 Productivity</span>?</div>
     <div class="problem-text">
       <p>Trong nhiều doanh nghiệp sản xuất và môi trường vận hành áp lực cao, không ít quản lý đang làm việc rất chăm chỉ nhưng kết quả tạo ra vẫn chưa tương xứng. Họ bận rộn gần như cả ngày, liên tục xử lý đầu việc, theo sát tiến độ, giải quyết phát sinh và phản hồi vô số yêu cầu. Tuy nhiên, càng làm nhiều lại càng dễ rơi vào trạng thái phân tán, quá tải và khó tạo ra bước nhảy thực sự về hiệu quả.</p>
       <p>Bên cạnh đó, nhiều đội nhóm vẫn vận hành theo kiểu phụ thuộc vào người quản lý. Tiêu chuẩn làm việc chưa đủ rõ, trách nhiệm chưa được phân vai rành mạch, cách theo dõi hiệu suất còn cảm tính. Khi không có hệ thống quản trị hiệu suất rõ ràng, người quản lý dễ bị cuốn vào việc chữa cháy hằng ngày, trong khi đội ngũ thiếu sự chủ động.</p>
-      <p>Nhiều quản lý vẫn đang hiểu hiệu suất theo nghĩa "làm nhiều hơn, nhanh hơn, cố hơn", thay vì "tạo ra nhiều giá trị hơn với cùng nguồn lực". Điều doanh nghiệp thực sự cần là những nhà quản lý biết thiết kế cách làm việc hiệu quả, chuẩn hóa tiêu chuẩn, tận dụng đúng đòn bẩy và tạo ra kết quả vượt trội một cách bền vững.</p>
+      <p>Một thách thức khác là nhiều quản lý vẫn đang hiểu hiệu suất theo nghĩa 'làm nhiều hơn, nhanh hơn, cố hơn', thay vì 'tạo ra nhiều giá trị hơn với cùng nguồn lực'. Khi tư duy chưa thay đổi, họ dễ tăng áp lực nhưng không tăng được chất lượng hệ thống làm việc.</p>
     </div>
   </div>
 </div>
@@ -129,8 +128,8 @@
       <li>Quản lý cấp trung trong nhà máy, khu công nghiệp và doanh nghiệp sản xuất</li>
       <li>Trưởng/phó phòng, supervisor, line leader đang chịu áp lực hiệu suất cao</li>
       <li>Quản lý luôn bận rộn nhưng chưa tạo được kết quả tương xứng với nguồn lực đang có</li>
-      <li>Quản lý muốn chuẩn hóa cách làm việc, tăng tính chủ động của đội ngũ và giảm phụ thuộc vào cá nhân mình</li>
-      <li>Doanh nghiệp muốn nâng cao hiệu suất tuyến giữa thông qua tư duy quản trị hiệu suất hiện đại</li>
+      <li>Quản lý đang muốn chuẩn hóa cách làm việc, tăng tính chủ động của đội ngũ và giảm phụ thuộc vào cá nhân mình</li>
+      <li>Doanh nghiệp muốn nâng cao hiệu suất tuyến giữa thông qua tư duy quản trị hiệu suất hiện đại, rõ tiêu chuẩn và có hệ thống</li>
     </ul>
   </div>
 </div>
@@ -143,12 +142,13 @@
       <div class="quote-text">Hiệu suất vượt trội không đến từ việc làm nhiều hơn, mà đến từ việc tạo ra nhiều hơn với cùng nguồn lực.</div>
     </div>
     <div class="method-grid">
-      <div class="method-card"><div class="method-card-title">📊 Self-assessment</div><div class="method-card-desc">Tự đánh giá thực trạng hiệu suất cá nhân và đội nhóm, nhận ra rõ điểm nghẽn cụ thể</div></div>
-      <div class="method-card"><div class="method-card-title">⚙️ Performance Workshop</div><div class="method-card-desc">Thực hành thiết lập tiêu chuẩn, đòn bẩy và cơ chế theo dõi hiệu suất trong thực tế</div></div>
-      <div class="method-card"><div class="method-card-title">🔍 Case Discussion</div><div class="method-card-desc">Phân tích tình huống quản trị hiệu suất trong môi trường sản xuất và vận hành</div></div>
-      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Câu hỏi giúp học viên nhìn ra điểm nghẽn và cơ hội bứt phá trong cách làm việc hiện tại</div></div>
-      <div class="method-card"><div class="method-card-title">📚 Mini-lecture</div><div class="method-card-desc">Cung cấp khung tư duy hiệu suất cô đọng, dễ áp dụng ngay vào bối cảnh doanh nghiệp</div></div>
-      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây kế hoạch ứng dụng sau khóa học với các bước thay đổi cụ thể, đo lường được</div></div>
+      <div class="method-card"><div class="method-card-title">👥 Participatory Learning</div><div class="method-card-desc">Học tập qua tham gia thực tế và phản tư về cách mình đang làm việc và vận hành đội ngũ</div></div>
+      <div class="method-card"><div class="method-card-title">📚 Mini-lecture</div><div class="method-card-desc">Cung cấp khung tư duy cô đọng, dễ áp dụng về hiệu suất và quản trị công việc</div></div>
+      <div class="method-card"><div class="method-card-title">📊 Case Discussion</div><div class="method-card-desc">Phân tích tình huống quản trị hiệu suất trong môi trường sản xuất</div></div>
+      <div class="method-card"><div class="method-card-title">💡 Self-assessment</div><div class="method-card-desc">Tự đánh giá thực trạng hiệu suất cá nhân và nhận diện các điểm nghẽn hiện tại</div></div>
+      <div class="method-card"><div class="method-card-title">⚙️ Performance Workshop</div><div class="method-card-desc">Thực hành thiết lập tiêu chuẩn, xác định đòn bẩy và xây dựng cơ chế theo dõi hiệu suất</div></div>
+      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Giúp học viên nhìn ra điểm nghẽn và cơ hội bứt phá trong cách làm việc của mình</div></div>
+      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây dựng kế hoạch ứng dụng cụ thể để tạo bước chuyển hiệu suất thực sự sau khóa học</div></div>
     </div>
   </div>
 </div>
@@ -159,24 +159,24 @@
     <div class="section-title">5 <span>Module</span> cốt lõi</div>
     <div class="modules">
       <div class="module">
-        <div class="module-header"><div class="module-num">1</div><div class="module-title">Tư duy hiệu suất mới – từ "làm nhiều hơn" đến "tạo ra nhiều hơn"</div></div>
-        <div class="module-body">Học viên nhìn lại cách mình đang hiểu và đang theo đuổi hiệu suất trong công việc. Module này giúp người học phân biệt giữa bận rộn và hiệu quả, giữa nỗ lực và giá trị tạo ra – từ đó tái định nghĩa hiệu suất theo hướng thực tế hơn.</div>
+        <div class="module-header"><div class="module-num">1</div><div class="module-title">Tư duy hiệu suất mới – từ 'làm nhiều hơn' đến 'tạo ra nhiều hơn'</div></div>
+        <div class="module-body">Học viên nhìn lại cách mình đang hiểu và đang theo đuổi hiệu suất trong công việc. Module này giúp người học phân biệt giữa bận rộn và hiệu quả, giữa nỗ lực và giá trị tạo ra, từ đó tái định nghĩa hiệu suất theo hướng thực tế hơn: tạo ra nhiều kết quả hơn với cùng nguồn lực, thay vì chỉ gia tăng cường độ làm việc.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">2</div><div class="module-title">Nhận diện điểm nghẽn làm giảm hiệu suất cá nhân và đội ngũ</div></div>
-        <div class="module-body">Chương trình giúp học viên rà soát những nguyên nhân phổ biến khiến hiệu suất bị kéo xuống: thiếu ưu tiên, tiêu chuẩn chưa rõ, phối hợp chưa nhịp nhàng, ôm việc, thiếu ủy quyền hoặc làm việc theo phản ứng. Học viên xác định rõ những "nút thắt" đang khiến mình và đội ngũ chưa phát huy được hết năng lực.</div>
+        <div class="module-body">Chương trình giúp học viên rà soát những nguyên nhân phổ biến khiến hiệu suất bị kéo xuống như thiếu ưu tiên, tiêu chuẩn chưa rõ, phối hợp chưa nhịp nhàng, ôm việc, thiếu ủy quyền hoặc làm việc theo phản ứng. Học viên xác định rõ đâu là những 'nút thắt' đang khiến mình và đội ngũ chưa phát huy được hết năng lực.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">3</div><div class="module-title">Xây dựng hệ thống quản trị hiệu suất cá nhân bền vững</div></div>
-        <div class="module-body">Học viên được hướng dẫn cách tổ chức công việc theo hướng có hệ thống hơn: làm rõ mục tiêu, chuẩn đầu ra, nhịp làm việc, nguyên tắc ưu tiên và cơ chế theo dõi. Module này giúp người học xây dựng phương pháp làm việc cá nhân hiệu quả, rõ ràng và có thể duy trì lâu dài.</div>
+        <div class="module-body">Học viên được hướng dẫn cách tổ chức công việc theo hướng có hệ thống hơn: làm rõ mục tiêu, chuẩn đầu ra, nhịp làm việc, nguyên tắc ưu tiên và cơ chế theo dõi. Module này tập trung vào việc giúp người học xây dựng một phương pháp làm việc cá nhân hiệu quả, rõ ràng và có thể duy trì lâu dài.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">4</div><div class="module-title">Thiết lập tiêu chuẩn rõ ràng cho đội nhóm và kích hoạt đúng đòn bẩy hiệu suất</div></div>
-        <div class="module-body">Module này đi vào việc thiết lập các tiêu chuẩn làm việc rõ ràng cho đội nhóm, xác định vai trò – trách nhiệm – kỳ vọng đầu ra. Học viên hiểu rằng không phải mọi nỗ lực đều tạo ra giá trị như nhau; người quản lý giỏi là người biết tập trung vào đúng đòn bẩy để nâng hiệu quả toàn hệ thống.</div>
+        <div class="module-body">Module này đi vào việc thiết lập các tiêu chuẩn làm việc rõ ràng cho đội nhóm, xác định vai trò – trách nhiệm – kỳ vọng đầu ra, đồng thời tìm ra các đòn bẩy quan trọng nhất có thể tạo ra bước nhảy hiệu suất. Học viên hiểu rằng không phải mọi nỗ lực đều tạo ra giá trị như nhau; người quản lý giỏi biết tập trung vào đúng đòn bẩy để nâng hiệu quả toàn hệ thống.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">5</div><div class="module-title">Kế hoạch ứng dụng để tạo kết quả vượt trội mà không làm việc nhiều hơn</div></div>
-        <div class="module-body">Học viên tổng hợp lại các nguyên tắc cốt lõi, chuyển hóa thành kế hoạch hành động thực tế cho bản thân và đội ngũ. Mục tiêu là rời lớp học với một lộ trình rõ ràng để tăng hiệu suất công việc và hướng tới kết quả vượt trội mà không cần tiếp tục làm việc theo kiểu quá tải như trước.</div>
+        <div class="module-body">Ở phần cuối, học viên tổng hợp lại các nguyên tắc cốt lõi, chuyển hóa thành kế hoạch hành động thực tế cho bản thân và đội ngũ. Mục tiêu của module này là giúp học viên rời lớp học với một lộ trình rõ ràng để tăng hiệu suất công việc, giảm lãng phí nguồn lực và hướng tới kết quả vượt trội mà không cần tiếp tục làm việc theo kiểu quá tải như trước.</div>
       </div>
     </div>
   </div>
@@ -187,12 +187,13 @@
     <div class="section-badge">05 · Kết quả kỳ vọng</div>
     <div class="section-title">Sau chương trình, học viên <span>có thể</span></div>
     <div class="outcome-grid">
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Thay đổi tư duy về hiệu suất từ "làm nhiều hơn" sang "tạo ra nhiều hơn với nguồn lực hiện có"</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Thay đổi tư duy về hiệu suất từ 'làm nhiều hơn' sang 'tạo ra nhiều hơn với nguồn lực hiện có'</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Nhận diện rõ các điểm nghẽn đang làm giảm hiệu suất cá nhân và đội nhóm</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Biết cách xây dựng hệ thống quản trị hiệu suất cá nhân rõ ràng và bền vững</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Xác định đúng các đòn bẩy quan trọng để gia tăng hiệu suất thay vì dàn trải nguồn lực</div></div>
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Giảm tình trạng bận rộn nhưng kém hiệu quả, tăng tính chủ động và tính hệ thống</div></div>
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tạo nền tảng để đội ngũ làm việc hiệu quả hơn, tự chủ hơn và đạt kết quả vượt trội</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Nâng cao khả năng theo dõi, điều chỉnh và duy trì hiệu suất trong công việc hằng ngày</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Giảm tình trạng bận rộn nhưng kém hiệu quả, tăng tính chủ động và tính hệ thống trong vận hành</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tạo nền tảng để đội ngũ làm việc hiệu quả hơn, tự chủ hơn và đạt kết quả vượt trội hơn</div></div>
     </div>
   </div>
 </div>
@@ -212,9 +213,9 @@
           <div class="cred-item"><div class="cred-dot"></div>10 năm kinh nghiệm đào tạo – huấn luyện doanh nghiệp</div>
           <div class="cred-item"><div class="cred-dot"></div>Chuyên gia phát triển năng lực lãnh đạo và hiệu suất cá nhân</div>
           <div class="cred-item"><div class="cred-dot"></div>MBA – Tư vấn quản trị chiến lược doanh nghiệp</div>
-          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer & Coach</div>
+          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer &amp; Coach</div>
         </div>
-        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất và khu công nghiệp.</div>
+        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất.</div>
       </div>
     </div>
   </div>
@@ -222,7 +223,7 @@
 
 <div class="page">
   <div class="container">
-    <div class="section-badge">07 · Hình thức tham gia & Đầu tư</div>
+    <div class="section-badge">07 · Hình thức tham gia &amp; Đầu tư</div>
     <div class="section-title">Thông tin <span>đăng ký</span></div>
     <div class="invest-grid">
       <div class="invest-card"><div class="invest-label">Ngày diễn ra</div><div class="invest-value">09/07/2026</div></div>
@@ -231,12 +232,13 @@
       <div class="invest-card"><div class="invest-label">Địa điểm</div><div class="invest-value">Amata Biên Hòa</div></div>
       <div class="invest-card highlight"><div class="invest-label">Chi phí đầu tư</div><div class="invest-value">3.500.000 VNĐ/người</div></div>
     </div>
-    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành cho đội ngũ quản lý đang mong muốn tăng hiệu suất một cách bền vững, rõ hệ thống và tạo ra kết quả vượt trội hơn với chính nguồn lực hiện có.</div>
+    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành cho đội ngũ quản lý đang mong muốn bứt phá hiệu suất, xây dựng hệ thống làm việc rõ ràng và tạo ra kết quả vượt trội bền vững.</div>
   </div>
 </div>
 
 <div class="footer">
   <strong>Forval Việt Nam</strong> · Public Training Program 2026 · Unlock Your X10 Productivity
 </div>
+
 </body>
 </html>
