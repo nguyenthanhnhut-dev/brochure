@@ -7,28 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --accent: #b84f0e;
-    --accent-light: #fdf0e6;
-    --accent-mid: #d05c10;
-    --dark: #2a1200;
+    --accent: #5e3a8a;
+    --accent-light: #f0ebf7;
+    --accent-mid: #7a4fb0;
+    --dark: #1a2330;
     --text: #2c3e50;
     --text-light: #5a6a7a;
-    --border: #f0d0b4;
-    --bg: #fffbf7;
+    --border: #d0ebd7;
+    --bg: #f9fafb;
     --white: #ffffff;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
-  .pdf-btn { position: fixed; top: 20px; right: 24px; z-index: 999; background: var(--accent); color: #fff; border: none; padding: 10px 22px; border-radius: 30px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 16px rgba(184,79,14,0.35); transition: all .2s; display: flex; align-items: center; gap: 8px; }
-  .pdf-btn:hover { background: var(--accent-mid); transform: translateY(-1px); }
-  .pdf-btn svg { width: 16px; height: 16px; fill: white; }
-  .hero { background: linear-gradient(135deg, #5c1e00 0%, #b84f0e 55%, #d05c10 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -80px; right: -60px; width: 380px; height: 380px; border-radius: 50%; background: rgba(255,255,255,0.04); }
-  .hero::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero { background: linear-gradient(135deg, #3a1f60 0%, #5e3a8a 50%, #7a4fb0 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 350px; height: 350px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,0.04); }
   .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
   .brand-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 5px 14px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
-  .brand-tag span { width: 8px; height: 8px; background: #ffd4a3; border-radius: 50%; display: inline-block; }
-  .hero-en { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .brand-tag span { width: 8px; height: 8px; background: #7fffd4; border-radius: 50%; display: inline-block; }
+  .hero-en { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
   .hero-vn { font-size: 20px; font-weight: 300; opacity: 0.88; margin-bottom: 20px; letter-spacing: 0.5px; }
   .hero-tagline { font-size: 14.5px; opacity: 0.8; font-style: italic; max-width: 580px; border-left: 3px solid rgba(255,255,255,0.4); padding-left: 14px; margin-top: 16px; }
   .meta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
@@ -65,7 +62,7 @@
   .outcome-text { font-size: 14px; line-height: 1.6; color: var(--dark); font-weight: 500; }
   .trainer-section { display: flex; gap: 40px; align-items: flex-start; }
   .trainer-photo-wrap { flex-shrink: 0; width: 190px; }
-  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(184,79,14,0.2); border: 4px solid var(--accent-light); }
+  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(14,107,94,0.2); border: 4px solid var(--accent-light); }
   .trainer-info { flex: 1; }
   .trainer-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
   .trainer-role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
@@ -84,15 +81,16 @@
   .footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 32px; font-size: 12.5px; }
   .footer strong { color: white; }
   @media print {
-    .pdf-btn { display: none !important; }
-    .hero, .module-header, .quote-block, .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .module-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .quote-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     body { font-size: 13px; }
     .page { padding: 36px 0; }
   }
 </style>
 </head>
 <body>
-
 
 <div class="hero">
   <div class="container">
@@ -113,11 +111,11 @@
 <div class="page">
   <div class="container">
     <div class="section-badge">01 · Bức tranh vấn đề</div>
-    <div class="section-title">Khi đội ngũ làm việc nhưng <span>thiếu lửa</span></div>
+    <div class="section-title">Vì sao cần <span>The Inspirational Leader</span>?</div>
     <div class="problem-text">
       <p>Trong bối cảnh môi trường kinh doanh ngày càng biến động, bất định và nhiều áp lực, vai trò của người quản lý không còn dừng ở việc giao việc và theo dõi kết quả. Đội ngũ ngày nay cần nhiều hơn một người kiểm soát công việc; họ cần một người có thể tạo năng lượng tích cực, giữ sự kết nối, khơi dậy động lực và giúp mọi người không đánh mất tinh thần giữa áp lực vận hành hằng ngày.</p>
-      <p>Trong thực tế, nhiều quản lý vẫn đang gặp khó khăn khi muốn tạo động lực cho đội ngũ. Có người quá tập trung vào mục tiêu và kết quả nên vô tình bỏ quên cảm xúc, nhu cầu và sự phát triển của nhân viên. Có người nhận thấy tinh thần đội nhóm đang giảm dần, nhưng chưa biết cách khích lệ, ghi nhận hay dẫn dắt để nhân viên thật sự muốn nỗ lực.</p>
-      <p>Khi người quản lý chưa biết cách truyền lửa, đội ngũ dễ rơi vào trạng thái làm việc cầm chừng, thiếu chủ động và thiếu kết nối. Mọi người có thể vẫn hoàn thành công việc ở mức tối thiểu, nhưng khó tạo ra sự bứt phá, khó chủ động đóng góp và càng khó gắn bó với mục tiêu chung của tổ chức.</p>
+      <p>Tuy vậy, trong thực tế, nhiều quản lý vẫn đang gặp khó khăn khi muốn tạo động lực cho đội ngũ. Có người quá tập trung vào mục tiêu và kết quả nên vô tình bỏ quên cảm xúc, nhu cầu và sự phát triển của nhân viên. Có người nhận thấy tinh thần đội nhóm đang giảm dần, nhưng chưa biết cách khích lệ, ghi nhận hay dẫn dắt để nhân viên thật sự muốn nỗ lực.</p>
+      <p>Khi người quản lý chưa biết cách truyền lửa, đội ngũ dễ rơi vào trạng thái làm việc cầm chừng, thiếu chủ động và thiếu kết nối. Trong môi trường sản xuất và khu công nghiệp, điều này không chỉ ảnh hưởng đến tinh thần mà còn tác động trực tiếp đến chất lượng phối hợp và hiệu quả lâu dài.</p>
     </div>
   </div>
 </div>
@@ -144,12 +142,13 @@
       <div class="quote-text">Người quản lý giỏi không chỉ tạo ra kết quả, mà còn tạo ra năng lượng để đội ngũ muốn cùng mình tạo ra kết quả đó.</div>
     </div>
     <div class="method-grid">
+      <div class="method-card"><div class="method-card-title">👥 Participatory Learning</div><div class="method-card-desc">Học tập qua tham gia thực tế và phản tư cá nhân về cách mình đang dẫn dắt đội ngũ</div></div>
+      <div class="method-card"><div class="method-card-title">📚 Mini-lecture</div><div class="method-card-desc">Cung cấp khung tư duy ngắn gọn, dễ áp dụng về động lực và lãnh đạo truyền cảm hứng</div></div>
+      <div class="method-card"><div class="method-card-title">📊 Case Discussion</div><div class="method-card-desc">Phân tích tình huống thực tế về động lực, gắn kết và quản lý đội nhóm</div></div>
       <div class="method-card"><div class="method-card-title">🪞 Self-reflection</div><div class="method-card-desc">Tự soi lại phong cách dẫn dắt, nguồn năng lượng và niềm tin lãnh đạo của bản thân</div></div>
-      <div class="method-card"><div class="method-card-title">🗺️ Team Canvas</div><div class="method-card-desc">Ứng dụng Team Canvas để làm rõ mục tiêu, vai trò, giá trị và nguyên tắc phối hợp nhóm</div></div>
-      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Khơi mở nhận thức và khả năng dẫn dắt động lực của đội ngũ bằng câu hỏi chất lượng</div></div>
-      <div class="method-card"><div class="method-card-title">📊 Case Discussion</div><div class="method-card-desc">Phân tích tình huống thực tế về động lực, gắn kết và quản lý đội nhóm trong môi trường sản xuất</div></div>
-      <div class="method-card"><div class="method-card-title">👥 Team Workshop</div><div class="method-card-desc">Hoạt động nhóm gắn với bối cảnh thực tế, giúp chuyển hóa nhận thức thành hành vi cụ thể</div></div>
-      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây kế hoạch ứng dụng sau khóa học để duy trì sức truyền lửa trong thực tế công việc</div></div>
+      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Khơi mở nhận thức và năng lực dẫn dắt động lực của đội ngũ</div></div>
+      <div class="method-card"><div class="method-card-title">🗺️ Team Workshop</div><div class="method-card-desc">Ứng dụng Team Canvas để làm rõ mục tiêu, vai trò, giá trị và nguyên tắc phối hợp trong đội</div></div>
+      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây dựng kế hoạch ứng dụng cụ thể để tạo chuyển biến trong đội ngũ sau khóa học</div></div>
     </div>
   </div>
 </div>
@@ -161,23 +160,23 @@
     <div class="modules">
       <div class="module">
         <div class="module-header"><div class="module-num">1</div><div class="module-title">Bối cảnh mới và vai trò mới của người quản lý truyền cảm hứng</div></div>
-        <div class="module-body">Học viên nhìn lại những thay đổi của môi trường kinh doanh trong bối cảnh biến động và áp lực ngày càng lớn; từ đó hiểu vì sao đội ngũ ngày nay cần một người có khả năng giữ nhịp tinh thần, tạo năng lượng tích cực và dẫn dắt bằng ảnh hưởng thay vì chỉ bằng chức danh.</div>
+        <div class="module-body">Học viên nhìn lại những thay đổi của môi trường kinh doanh và hiểu vì sao đội ngũ ngày nay không chỉ cần một người quản lý công việc, mà cần một người có khả năng giữ nhịp tinh thần, tạo năng lượng tích cực và giúp mọi người giữ được định hướng giữa thay đổi. Module này giúp người học xác định lại vai trò của mình trong việc dẫn dắt bằng ảnh hưởng thay vì chỉ bằng chức danh.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">2</div><div class="module-title">Đánh thức nội lực và hiểu cơ chế hình thành động lực</div></div>
-        <div class="module-body">Chương trình giúp học viên hiểu động lực không chỉ là cảm hứng nhất thời, mà là kết quả của cách con người diễn giải ngoại cảnh, suy nghĩ, cảm xúc và hành vi. Học viên khám phá mối liên hệ giữa nội lực cá nhân, kỳ vọng, phản ứng và kết quả – một người quản lý muốn truyền lửa hiệu quả trước hết phải quản trị được chính mình.</div>
+        <div class="module-body">Chương trình giúp học viên hiểu động lực không chỉ là cảm hứng nhất thời, mà là kết quả của cách con người diễn giải ngoại cảnh, suy nghĩ, cảm xúc và hành vi của mình. Học viên khám phá mối liên hệ giữa nội lực cá nhân, nỗi sợ, kỳ vọng, phản ứng và kết quả; từ đó nhận ra người muốn truyền lửa hiệu quả trước hết phải quản trị được năng lượng và tư duy của chính mình.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">3</div><div class="module-title">Thiết lập mục tiêu rõ ràng để tạo cam kết và định hướng hành động</div></div>
-        <div class="module-body">Học viên được hướng dẫn cách ứng dụng tư duy SMART/KPI để đội ngũ hiểu mình đang hướng tới điều gì, vì sao điều đó quan trọng và mỗi người đóng góp như thế nào vào mục tiêu chung. Khi mục tiêu đủ rõ, việc tạo động lực sẽ bớt cảm tính và trở nên thực tiễn hơn.</div>
+        <div class="module-body">Học viên được hướng dẫn cách chuyển động lực thành định hướng cụ thể thông qua thiết lập mục tiêu rõ ràng, có ý nghĩa và có thể theo dõi được. Module này tập trung vào việc ứng dụng tư duy SMART/KPI để đội ngũ hiểu mình đang hướng tới điều gì, vì sao điều đó quan trọng và mỗi người đóng góp như thế nào vào mục tiêu chung.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">4</div><div class="module-title">Coaching, ghi nhận và khích lệ để duy trì động lực bền vững</div></div>
-        <div class="module-body">Module này đi sâu vào các hành vi quản lý có tác động trực tiếp đến tinh thần đội ngũ: đặt câu hỏi coaching, lắng nghe, khích lệ đúng lúc, ghi nhận đúng cách. Học viên thực hành thúc đẩy nhân viên đang chững lại, hỗ trợ người thiếu tự tin và tạo sự đồng hành thay vì chỉ thúc ép hoàn thành công việc.</div>
+        <div class="module-body">Module này đi sâu vào các hành vi quản lý có tác động trực tiếp đến tinh thần đội ngũ: đặt câu hỏi coaching, lắng nghe, khích lệ đúng lúc, ghi nhận đúng cách và giúp nhân viên nhìn thấy giá trị trong nỗ lực của họ. Học viên thực hành các tình huống như thúc đẩy nhân viên đang chững lại, hỗ trợ người thiếu tự tin và tạo sự đồng hành thay vì chỉ thúc ép hoàn thành công việc.</div>
       </div>
       <div class="module">
         <div class="module-header"><div class="module-num">5</div><div class="module-title">Xây nền gắn kết đội ngũ bằng Team Canvas và kế hoạch ứng dụng</div></div>
-        <div class="module-body">Học viên ứng dụng tư duy Team Canvas để nhìn lại mục tiêu tồn tại của đội, giá trị chung, vai trò từng thành viên và nguyên tắc phối hợp. Đây là bước giúp "truyền lửa" không dừng ở mức khích lệ cá nhân, mà được chuyển thành nền tảng văn hóa và cơ chế phối hợp thực sự của đội ngũ.</div>
+        <div class="module-body">Học viên ứng dụng tư duy Team Canvas để cùng nhìn lại mục tiêu tồn tại của đội, giá trị chung, vai trò của từng thành viên, nguyên tắc giao tiếp, phối hợp và kỳ vọng phát triển. Đây là bước giúp 'truyền lửa' không dừng ở mức khích lệ cá nhân, mà được chuyển thành nền tảng văn hóa và cơ chế phối hợp thực sự của đội ngũ.</div>
       </div>
     </div>
   </div>
@@ -189,11 +188,13 @@
     <div class="section-title">Sau chương trình, học viên <span>có thể</span></div>
     <div class="outcome-grid">
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Hiểu rõ vai trò của người quản lý trong việc tạo động lực và giữ lửa đội ngũ</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Nhận diện các yếu tố tác động đến động lực cá nhân và động lực tập thể</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Biết cách thiết lập mục tiêu rõ ràng để tạo định hướng và cam kết hành động</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Nâng cao khả năng coaching, động viên và ghi nhận thành tích đúng cách</div></div>
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tạo môi trường làm việc tích cực hơn, giảm trạng thái làm việc cầm chừng</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tạo môi trường làm việc tích cực hơn, giảm trạng thái làm việc cầm chừng hoặc thiếu kết nối</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tăng mức độ gắn kết, chủ động và đồng hành trong đội nhóm</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Làm rõ hơn mục tiêu chung, vai trò và nguyên tắc phối hợp của đội ngũ</div></div>
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Xây dựng nền tảng văn hóa làm việc tích cực và động lực bền vững</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Xây dựng nền tảng văn hóa làm việc tích cực và động lực bền vững trong tổ chức</div></div>
     </div>
   </div>
 </div>
@@ -213,9 +214,9 @@
           <div class="cred-item"><div class="cred-dot"></div>10 năm kinh nghiệm đào tạo – huấn luyện doanh nghiệp</div>
           <div class="cred-item"><div class="cred-dot"></div>Chuyên gia phát triển năng lực lãnh đạo và hiệu suất cá nhân</div>
           <div class="cred-item"><div class="cred-dot"></div>MBA – Tư vấn quản trị chiến lược doanh nghiệp</div>
-          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer & Coach</div>
+          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer &amp; Coach</div>
         </div>
-        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất và khu công nghiệp.</div>
+        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất.</div>
       </div>
     </div>
   </div>
@@ -223,7 +224,7 @@
 
 <div class="page">
   <div class="container">
-    <div class="section-badge">07 · Hình thức tham gia & Đầu tư</div>
+    <div class="section-badge">07 · Hình thức tham gia &amp; Đầu tư</div>
     <div class="section-title">Thông tin <span>đăng ký</span></div>
     <div class="invest-grid">
       <div class="invest-card"><div class="invest-label">Ngày diễn ra</div><div class="invest-value">02/07/2026</div></div>
@@ -232,12 +233,13 @@
       <div class="invest-card"><div class="invest-label">Địa điểm</div><div class="invest-value">Amata Biên Hòa</div></div>
       <div class="invest-card highlight"><div class="invest-label">Chi phí đầu tư</div><div class="invest-value">3.500.000 VNĐ/người</div></div>
     </div>
-    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành cho đội ngũ quản lý đang mong muốn xây dựng động lực bền vững, tăng gắn kết và dẫn dắt đội ngũ bằng năng lượng tích cực, rõ mục tiêu và giàu cam kết.</div>
+    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành cho đội ngũ quản lý đang mong muốn xây dựng đội nhóm có động lực bền vững, tinh thần gắn kết và cam kết cùng tiến về một mục tiêu.</div>
   </div>
 </div>
 
 <div class="footer">
   <strong>Forval Việt Nam</strong> · Public Training Program 2026 · The Inspirational Leader
 </div>
+
 </body>
 </html>
