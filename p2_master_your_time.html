@@ -3,42 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Master Your Time – Làm chủ thời gian, Gấp đôi hiệu quả | Forval</title>
+<title>Master Your Time, Multiply Your Impact – Làm chủ thời gian – Gấp đôi hiệu quả | Forval</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --accent: #1b4f8a;
-    --accent-light: #e8eef8;
-    --accent-mid: #2563ad;
-    --dark: #0f1e30;
+    --accent: #1a5494;
+    --accent-light: #e6eef8;
+    --accent-mid: #2468b8;
+    --dark: #1a2330;
     --text: #2c3e50;
     --text-light: #5a6a7a;
-    --border: #c8d8f0;
-    --bg: #f7f9fc;
+    --border: #e6eed7;
+    --bg: #f9fafb;
     --white: #ffffff;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
-  .pdf-btn {
-    position: fixed; top: 20px; right: 24px; z-index: 999;
-    background: var(--accent); color: #fff;
-    border: none; padding: 10px 22px; border-radius: 30px;
-    font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600;
-    cursor: pointer; box-shadow: 0 4px 16px rgba(27,79,138,0.35);
-    transition: all .2s; display: flex; align-items: center; gap: 8px;
-  }
-  .pdf-btn:hover { background: var(--accent-mid); transform: translateY(-1px); }
-  .pdf-btn svg { width: 16px; height: 16px; fill: white; }
-  .hero {
-    background: linear-gradient(135deg, #0a2244 0%, #1b4f8a 55%, #2563ad 100%);
-    color: white; padding: 60px 0 50px; position: relative; overflow: hidden;
-  }
-  .hero::before { content: ''; position: absolute; top: -80px; right: -60px; width: 380px; height: 380px; border-radius: 50%; background: rgba(255,255,255,0.04); }
-  .hero::after { content: ''; position: absolute; bottom: -60px; left: -40px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero { background: linear-gradient(135deg, #0f2e5c 0%, #1a5494 50%, #2468b8 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 350px; height: 350px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,0.04); }
   .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
   .brand-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 5px 14px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
-  .brand-tag span { width: 8px; height: 8px; background: #7eb8ff; border-radius: 50%; display: inline-block; }
-  .hero-en { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .brand-tag span { width: 8px; height: 8px; background: #7fffd4; border-radius: 50%; display: inline-block; }
+  .hero-en { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
   .hero-vn { font-size: 20px; font-weight: 300; opacity: 0.88; margin-bottom: 20px; letter-spacing: 0.5px; }
   .hero-tagline { font-size: 14.5px; opacity: 0.8; font-style: italic; max-width: 580px; border-left: 3px solid rgba(255,255,255,0.4); padding-left: 14px; margin-top: 16px; }
   .meta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
@@ -75,7 +62,7 @@
   .outcome-text { font-size: 14px; line-height: 1.6; color: var(--dark); font-weight: 500; }
   .trainer-section { display: flex; gap: 40px; align-items: flex-start; }
   .trainer-photo-wrap { flex-shrink: 0; width: 190px; }
-  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(27,79,138,0.2); border: 4px solid var(--accent-light); }
+  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(14,107,94,0.2); border: 4px solid var(--accent-light); }
   .trainer-info { flex: 1; }
   .trainer-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
   .trainer-role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
@@ -94,15 +81,16 @@
   .footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 32px; font-size: 12.5px; }
   .footer strong { color: white; }
   @media print {
-    .pdf-btn { display: none !important; }
-    .hero, .module-header, .quote-block, .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .module-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .quote-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     body { font-size: 13px; }
     .page { padding: 36px 0; }
   }
 </style>
 </head>
 <body>
-
 
 <div class="hero">
   <div class="container">
@@ -123,11 +111,11 @@
 <div class="page">
   <div class="container">
     <div class="section-badge">01 · Bức tranh vấn đề</div>
-    <div class="section-title">Bận rộn không có nghĩa là <span>hiệu quả</span></div>
+    <div class="section-title">Vì sao cần <span>Master Your Time, Multiply Your Impact</span>?</div>
     <div class="problem-text">
       <p>Trong môi trường sản xuất và vận hành tốc độ cao, nhiều quản lý luôn ở trong trạng thái bận rộn, liên tục xử lý phát sinh, theo sát tiến độ và giải quyết các đầu việc mỗi ngày. Tuy nhiên, mức độ bận rộn đó không phải lúc nào cũng đi cùng với hiệu quả thực sự.</p>
       <p>Không ít quản lý giỏi chuyên môn nhưng chưa có phương pháp rõ ràng để sắp xếp ưu tiên, phân bổ thời gian và kiểm soát khối lượng công việc. Họ dễ rơi vào trạng thái ôm việc, khó ủy quyền, liên tục bị kéo vào các việc vụn vặt vì cấp dưới phụ thuộc quá nhiều vào mình.</p>
-      <p>Bên cạnh đó, nhiều quản lý đang mất cân bằng giữa việc xử lý công việc thường nhật với các nhiệm vụ quan trọng hơn như lập kế hoạch, cải tiến quy trình và phát triển con người. Khi thời gian không được làm chủ, người quản lý sẽ khó tạo ra nhịp làm việc rõ ràng và càng khó tạo ra tác động lớn hơn trong tổ chức.</p>
+      <p>Bên cạnh đó, nhiều quản lý đang mất cân bằng giữa việc xử lý công việc thường nhật với các nhiệm vụ quan trọng hơn như lập kế hoạch, cải tiến quy trình và phát triển con người. Khi thời gian không được làm chủ, người quản lý sẽ khó tạo ra nhịp làm việc rõ ràng, khó nâng chất lượng điều hành, và càng khó tạo ra tác động lớn hơn trong tổ chức.</p>
     </div>
   </div>
 </div>
@@ -154,12 +142,13 @@
       <div class="quote-text">Người quản lý giỏi không chỉ quản lý công việc, mà còn quản lý năng lượng, sự tập trung và ưu tiên.</div>
     </div>
     <div class="method-grid">
-      <div class="method-card"><div class="method-card-title">👥 Participatory Learning</div><div class="method-card-desc">Học qua tham gia và phản tư thực tế, gắn với bối cảnh công việc hàng ngày của học viên</div></div>
-      <div class="method-card"><div class="method-card-title">💡 Self-assessment</div><div class="method-card-desc">Tự đánh giá cách sử dụng thời gian hiện tại, nhận ra điểm lãng phí và cơ hội cải thiện</div></div>
-      <div class="method-card"><div class="method-card-title">🗂️ Planning Workshop</div><div class="method-card-desc">Thực hành lập ưu tiên, sắp lịch, kiểm soát công việc theo framework rõ ràng</div></div>
-      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Bộ câu hỏi giúp học viên nhìn ra thời gian lãng phí và thói quen làm việc kém hiệu quả</div></div>
-      <div class="method-card"><div class="method-card-title">📊 Case Discussion</div><div class="method-card-desc">Thảo luận các tình huống điển hình trong môi trường sản xuất và vận hành thực tế</div></div>
-      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây kế hoạch thay đổi cụ thể sau khóa học để duy trì hiệu quả trong thực tế công việc</div></div>
+      <div class="method-card"><div class="method-card-title">👥 Participatory Learning</div><div class="method-card-desc">Học qua tham gia và phản tư thực tế, kết nối trực tiếp với thực tiễn công việc hàng ngày</div></div>
+      <div class="method-card"><div class="method-card-title">📚 Mini-lecture</div><div class="method-card-desc">Cung cấp khung tư duy ngắn gọn, dễ áp dụng vào thực tế quản lý</div></div>
+      <div class="method-card"><div class="method-card-title">📊 Case Discussion</div><div class="method-card-desc">Thảo luận các tình huống điển hình trong môi trường sản xuất và vận hành</div></div>
+      <div class="method-card"><div class="method-card-title">💡 Self-assessment</div><div class="method-card-desc">Tự đánh giá cách sử dụng thời gian và nhận diện các thói quen làm giảm hiệu suất</div></div>
+      <div class="method-card"><div class="method-card-title">🗂️ Planning Workshop</div><div class="method-card-desc">Thực hành lập ưu tiên, sắp lịch và kiểm soát công việc theo ngày/tuần</div></div>
+      <div class="method-card"><div class="method-card-title">💬 Coaching Questions</div><div class="method-card-desc">Giúp học viên nhìn ra thời gian lãng phí và điểm nghẽn trong cách làm việc của mình</div></div>
+      <div class="method-card"><div class="method-card-title">✅ Action Plan</div><div class="method-card-desc">Xây dựng kế hoạch cụ thể để thay đổi và cải thiện hiệu quả sử dụng thời gian sau khóa học</div></div>
     </div>
   </div>
 </div>
@@ -198,11 +187,13 @@
     <div class="section-badge">05 · Kết quả kỳ vọng</div>
     <div class="section-title">Sau chương trình, học viên <span>có thể</span></div>
     <div class="outcome-grid">
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Hiểu rõ nguyên nhân khiến thời gian bị phân tán và hiệu suất suy giảm</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Hiểu rõ các nguyên nhân khiến thời gian bị phân tán và hiệu suất bị suy giảm</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Biết cách xác định ưu tiên và tập trung vào những việc quan trọng nhất</div></div>
-      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Lập kế hoạch công việc ngày/tuần rõ ràng hơn và thực tế hơn</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Lập kế hoạch công việc ngày/tuần rõ ràng hơn, thực tế hơn</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Giảm tình trạng làm việc bị động, xử lý việc theo cảm tính</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Nâng cao khả năng kiểm soát deadline, theo dõi tiến độ và xử lý phát sinh</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Giảm thói quen ôm việc, tăng khả năng giao việc và phối hợp hiệu quả</div></div>
+      <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Tạo được nhịp làm việc rõ ràng hơn cho bản thân và đội ngũ</div></div>
       <div class="outcome-item"><div class="outcome-icon"><svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg></div><div class="outcome-text">Gia tăng hiệu suất cá nhân và chất lượng điều hành công việc</div></div>
     </div>
   </div>
@@ -223,9 +214,9 @@
           <div class="cred-item"><div class="cred-dot"></div>10 năm kinh nghiệm đào tạo – huấn luyện doanh nghiệp</div>
           <div class="cred-item"><div class="cred-dot"></div>Chuyên gia phát triển năng lực lãnh đạo và hiệu suất cá nhân</div>
           <div class="cred-item"><div class="cred-dot"></div>MBA – Tư vấn quản trị chiến lược doanh nghiệp</div>
-          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer & Coach</div>
+          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer &amp; Coach</div>
         </div>
-        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, quản trị công việc và nâng cao hiệu suất cá nhân. Với nền tảng MBA cùng tư duy huấn luyện thực tiễn, anh mang đến các chương trình đào tạo có tính ứng dụng cao, phù hợp với bối cảnh quản lý trong doanh nghiệp sản xuất và môi trường vận hành thực tế.</div>
+        <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất.</div>
       </div>
     </div>
   </div>
@@ -233,7 +224,7 @@
 
 <div class="page">
   <div class="container">
-    <div class="section-badge">07 · Hình thức tham gia & Đầu tư</div>
+    <div class="section-badge">07 · Hình thức tham gia &amp; Đầu tư</div>
     <div class="section-title">Thông tin <span>đăng ký</span></div>
     <div class="invest-grid">
       <div class="invest-card"><div class="invest-label">Ngày diễn ra</div><div class="invest-value">18/06/2026</div></div>
@@ -242,12 +233,13 @@
       <div class="invest-card"><div class="invest-label">Địa điểm</div><div class="invest-value">Amata Biên Hòa</div></div>
       <div class="invest-card highlight"><div class="invest-label">Chi phí đầu tư</div><div class="invest-value">3.500.000 VNĐ/người</div></div>
     </div>
-    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành riêng cho đội ngũ quản lý đang mong muốn nâng cao hiệu suất làm việc và chất lượng điều hành trong doanh nghiệp.</div>
+    <div class="invest-note">Liên hệ <strong>Forval Việt Nam</strong> để được tư vấn chi tiết và đăng ký tham gia chương trình, dành cho đội ngũ quản lý đang mong muốn làm chủ thời gian, tăng năng suất cá nhân và nâng cao chất lượng điều hành đội ngũ.</div>
   </div>
 </div>
 
 <div class="footer">
   <strong>Forval Việt Nam</strong> · Public Training Program 2026 · Master Your Time, Multiply Your Impact
 </div>
+
 </body>
 </html>
