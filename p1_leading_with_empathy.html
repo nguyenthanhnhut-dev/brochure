@@ -19,186 +19,78 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Be Vietnam Pro', sans-serif; background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.7; }
-
-  /* PDF Button */
-  .pdf-btn {
-    position: fixed; top: 20px; right: 24px; z-index: 999;
-    background: var(--accent); color: #fff;
-    border: none; padding: 10px 22px; border-radius: 30px;
-    font-family: 'Be Vietnam Pro', sans-serif; font-size: 13px; font-weight: 600;
-    cursor: pointer; box-shadow: 0 4px 16px rgba(14,107,94,0.35);
-    transition: all .2s;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .pdf-btn:hover { background: var(--accent-mid); transform: translateY(-1px); }
-  .pdf-btn svg { width: 16px; height: 16px; fill: white; }
-
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #0a4a40 0%, #0e6b5e 50%, #1a8a79 100%);
-    color: white; padding: 60px 0 50px;
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: ''; position: absolute; top: -60px; right: -60px;
-    width: 350px; height: 350px; border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-  }
-  .hero::after {
-    content: ''; position: absolute; bottom: -80px; left: -40px;
-    width: 280px; height: 280px; border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-  }
+  .hero { background: linear-gradient(135deg, #0a4a40 0%, #0e6b5e 50%, #1a8a79 100%); color: white; padding: 60px 0 50px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; right: -60px; width: 350px; height: 350px; border-radius: 50%; background: rgba(255,255,255,0.05); }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: -40px; width: 280px; height: 280px; border-radius: 50%; background: rgba(255,255,255,0.04); }
   .container { max-width: 860px; margin: 0 auto; padding: 0 32px; }
-  .brand-tag {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
-    border-radius: 30px; padding: 5px 14px; font-size: 12px; font-weight: 600;
-    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px;
-  }
+  .brand-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 30px; padding: 5px 14px; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
   .brand-tag span { width: 8px; height: 8px; background: #7fffd4; border-radius: 50%; display: inline-block; }
-  .hero-en { font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
+  .hero-en { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; line-height: 1.2; margin-bottom: 10px; }
   .hero-vn { font-size: 20px; font-weight: 300; opacity: 0.88; margin-bottom: 20px; letter-spacing: 0.5px; }
   .hero-tagline { font-size: 14.5px; opacity: 0.8; font-style: italic; max-width: 580px; border-left: 3px solid rgba(255,255,255,0.4); padding-left: 14px; margin-top: 16px; }
-
-  /* META CARDS */
   .meta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
-  .meta-card {
-    background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 10px; padding: 10px 18px; display: flex; flex-direction: column; gap: 2px;
-  }
+  .meta-card { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; padding: 10px 18px; display: flex; flex-direction: column; gap: 2px; }
   .meta-label { font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7; }
   .meta-value { font-size: 14px; font-weight: 600; }
-
-  /* SECTIONS */
   .page { padding: 56px 0; }
   .page:nth-child(even) { background: var(--white); }
-  .section-badge {
-    display: inline-block; background: var(--accent-light); color: var(--accent);
-    font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 4px; margin-bottom: 10px;
-  }
-  .section-title {
-    font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700;
-    color: var(--dark); margin-bottom: 20px; line-height: 1.3;
-  }
+  .section-badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 4px 12px; border-radius: 4px; margin-bottom: 10px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 20px; line-height: 1.3; }
   .section-title span { color: var(--accent); }
-
-  /* PROBLEM */
   .problem-text { color: var(--text); line-height: 1.85; }
   .problem-text p + p { margin-top: 14px; }
-
-  /* TARGET */
   .target-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .target-list li {
-    background: var(--accent-light); border-left: 4px solid var(--accent);
-    padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.6;
-  }
+  .target-list li { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 8px 8px 0; font-size: 14.5px; line-height: 1.6; }
   .target-list li::before { content: '→ '; font-weight: 700; color: var(--accent); }
-
-  /* PHILOSOPHY */
-  .quote-block {
-    background: var(--dark); color: white; border-radius: 14px;
-    padding: 30px 36px; margin-bottom: 28px;
-    position: relative; overflow: hidden;
-  }
-  .quote-block::before {
-    content: '"'; position: absolute; top: -10px; left: 18px;
-    font-family: 'Playfair Display', serif; font-size: 100px; opacity: 0.12;
-    line-height: 1; color: white;
-  }
+  .quote-block { background: var(--dark); color: white; border-radius: 14px; padding: 30px 36px; margin-bottom: 28px; position: relative; overflow: hidden; }
+  .quote-block::before { content: '"'; position: absolute; top: -10px; left: 18px; font-family: 'Playfair Display', serif; font-size: 100px; opacity: 0.12; line-height: 1; color: white; }
   .quote-text { font-size: 16.5px; font-weight: 600; font-style: italic; line-height: 1.6; position: relative; z-index: 1; }
-  
   .method-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .method-card {
-    border: 1.5px solid var(--border); border-radius: 10px;
-    padding: 14px 16px; background: var(--white);
-  }
+  .method-card { border: 1.5px solid var(--border); border-radius: 10px; padding: 14px 16px; background: var(--white); }
   .method-card-title { font-weight: 700; color: var(--accent); font-size: 13.5px; margin-bottom: 4px; }
   .method-card-desc { font-size: 13px; color: var(--text-light); line-height: 1.55; }
-
-  /* MODULES */
   .modules { display: flex; flex-direction: column; gap: 16px; }
-  .module {
-    border-radius: 12px; border: 1.5px solid var(--border);
-    overflow: hidden; background: var(--white);
-  }
-  .module-header {
-    background: var(--accent); color: white;
-    padding: 12px 20px; display: flex; align-items: center; gap: 14px;
-  }
-  .module-num {
-    width: 32px; height: 32px; border-radius: 50%;
-    background: rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 14px; flex-shrink: 0;
-  }
+  .module { border-radius: 12px; border: 1.5px solid var(--border); overflow: hidden; background: var(--white); }
+  .module-header { background: var(--accent); color: white; padding: 12px 20px; display: flex; align-items: center; gap: 14px; }
+  .module-num { width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0; }
   .module-title { font-weight: 700; font-size: 14.5px; }
   .module-body { padding: 16px 20px; font-size: 14px; line-height: 1.75; color: var(--text); }
-
-  /* OUTCOMES */
   .outcome-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .outcome-item {
-    display: flex; gap: 12px; align-items: flex-start;
-    background: var(--accent-light); border-radius: 10px; padding: 14px 16px;
-  }
+  .outcome-item { display: flex; gap: 12px; align-items: flex-start; background: var(--accent-light); border-radius: 10px; padding: 14px 16px; }
   .outcome-icon { flex-shrink: 0; width: 24px; height: 24px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
   .outcome-icon svg { width: 13px; height: 13px; fill: white; }
   .outcome-text { font-size: 14px; line-height: 1.6; color: var(--dark); font-weight: 500; }
-
-  /* TRAINER */
   .trainer-section { display: flex; gap: 40px; align-items: flex-start; }
-  .trainer-photo-wrap {
-    flex-shrink: 0; width: 190px;
-  }
-  .trainer-photo-wrap img {
-    width: 190px; height: 240px; object-fit: cover; object-position: top center;
-    border-radius: 12px; display: block;
-    box-shadow: 0 8px 32px rgba(14,107,94,0.2);
-    border: 4px solid var(--accent-light);
-  }
+  .trainer-photo-wrap { flex-shrink: 0; width: 190px; }
+  .trainer-photo-wrap img { width: 190px; height: 240px; object-fit: cover; object-position: top center; border-radius: 12px; display: block; box-shadow: 0 8px 32px rgba(14,107,94,0.2); border: 4px solid var(--accent-light); }
   .trainer-info { flex: 1; }
   .trainer-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
   .trainer-role { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 18px; }
   .trainer-creds { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
-  .cred-item {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 14px; color: var(--text);
-  }
+  .cred-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text); }
   .cred-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
   .trainer-bio { font-size: 14.5px; line-height: 1.8; color: var(--text); font-style: italic; border-top: 1.5px solid var(--border); padding-top: 16px; }
-
-  /* INVESTMENT */
   .invest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .invest-card {
-    border-radius: 12px; padding: 20px 24px;
-    border: 1.5px solid var(--border); background: var(--white);
-  }
+  .invest-card { border-radius: 12px; padding: 20px 24px; border: 1.5px solid var(--border); background: var(--white); }
   .invest-label { font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
   .invest-value { font-size: 18px; font-weight: 700; color: var(--dark); }
   .invest-card.highlight { background: var(--accent); border-color: var(--accent); }
   .invest-card.highlight .invest-label { color: rgba(255,255,255,0.75); }
   .invest-card.highlight .invest-value { color: white; font-size: 22px; }
   .invest-note { margin-top: 20px; background: var(--accent-light); border-radius: 10px; padding: 16px 20px; font-size: 14px; color: var(--text); line-height: 1.7; }
-
-  /* FOOTER */
   .footer { background: var(--dark); color: rgba(255,255,255,0.6); text-align: center; padding: 24px 32px; font-size: 12.5px; }
   .footer strong { color: white; }
-
-  /* PRINT */
   @media print {
-    .pdf-btn { display: none !important; }
     .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .module-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .quote-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .invest-card.highlight { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     body { font-size: 13px; }
     .page { padding: 36px 0; }
-    .outcome-grid { grid-template-columns: repeat(2,1fr); }
   }
 </style>
 </head>
 <body>
-
 
 <div class="hero">
   <div class="container">
@@ -216,7 +108,6 @@
   </div>
 </div>
 
-<!-- PROBLEM -->
 <div class="page">
   <div class="container">
     <div class="section-badge">01 · Bức tranh vấn đề</div>
@@ -229,7 +120,6 @@
   </div>
 </div>
 
-<!-- TARGET -->
 <div class="page">
   <div class="container">
     <div class="section-badge">02 · Đối tượng phù hợp</div>
@@ -244,7 +134,6 @@
   </div>
 </div>
 
-<!-- PHILOSOPHY -->
 <div class="page">
   <div class="container">
     <div class="section-badge">03 · Triết lý & Phương pháp</div>
@@ -262,7 +151,6 @@
   </div>
 </div>
 
-<!-- MODULES -->
 <div class="page">
   <div class="container">
     <div class="section-badge">04 · Nội dung chương trình</div>
@@ -292,7 +180,6 @@
   </div>
 </div>
 
-<!-- OUTCOMES -->
 <div class="page">
   <div class="container">
     <div class="section-badge">05 · Kết quả kỳ vọng</div>
@@ -308,7 +195,6 @@
   </div>
 </div>
 
-<!-- TRAINER -->
 <div class="page">
   <div class="container">
     <div class="section-badge">06 · Thông tin giảng viên</div>
@@ -324,7 +210,7 @@
           <div class="cred-item"><div class="cred-dot"></div>10 năm kinh nghiệm đào tạo – huấn luyện doanh nghiệp</div>
           <div class="cred-item"><div class="cred-dot"></div>Chuyên gia phát triển năng lực lãnh đạo và hiệu suất cá nhân</div>
           <div class="cred-item"><div class="cred-dot"></div>MBA – Tư vấn quản trị chiến lược doanh nghiệp</div>
-          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer & Coach</div>
+          <div class="cred-item"><div class="cred-dot"></div>J.C. Maxwell Trainer &amp; Coach</div>
         </div>
         <div class="trainer-bio">Ngô Bảo Thái là giảng viên đào tạo doanh nghiệp với nhiều năm kinh nghiệm đồng hành cùng đội ngũ quản lý trong phát triển năng lực lãnh đạo, giao tiếp quản lý và nâng cao hiệu suất làm việc. Với nền tảng MBA cùng tư duy huấn luyện ứng dụng, anh mang đến các chương trình thực tiễn, dễ tiếp cận và có tính áp dụng cao, đặc biệt phù hợp với môi trường quản lý trong doanh nghiệp sản xuất.</div>
       </div>
@@ -332,10 +218,9 @@
   </div>
 </div>
 
-<!-- INVESTMENT -->
 <div class="page">
   <div class="container">
-    <div class="section-badge">07 · Hình thức tham gia & Đầu tư</div>
+    <div class="section-badge">07 · Hình thức tham gia &amp; Đầu tư</div>
     <div class="section-title">Thông tin <span>đăng ký</span></div>
     <div class="invest-grid">
       <div class="invest-card"><div class="invest-label">Ngày diễn ra</div><div class="invest-value">11/06/2026</div></div>
